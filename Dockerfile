@@ -22,4 +22,4 @@ WORKDIR $HOME/app
 # Set the working directory to the user's home directory
 COPY --chown=user . $HOME/app
 
-CMD [ "gunicorn" , "main:app", "--host", "0.0.0.0", "--port", "7860" ]
+CMD [ "gunicorn" , "main:app" ]
