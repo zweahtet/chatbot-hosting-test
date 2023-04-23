@@ -1,0 +1,17 @@
+Click
+Flask
+Flask-SQLAlchemy
+gunicorn
+itsdangerous
+Jinja2
+MarkupSafe
+SQLAlchemy
+Werkzeug
+llama_index
+torch
+transformers
+panda
+numpy
+langchain
+python-dotenv
+flask-login
