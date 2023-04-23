@@ -4,7 +4,7 @@ from dotenv import load_dotenv
 from llama_index import (Document, GPTSimpleVectorIndex, LLMPredictor,
                          ServiceContext)
 
-from data.regItems import data
+from data.prepare import data
 
 from .customLLM import CustomLLM, prompt_helper
 
