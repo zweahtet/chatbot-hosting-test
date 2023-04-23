@@ -1,11 +1,12 @@
 import os
 
-from customLLM import CustomLLM, prompt_helper
 from dotenv import load_dotenv
 from llama_index import (Document, GPTSimpleVectorIndex, LLMPredictor,
                          ServiceContext)
 
 from data.regItems import data
+
+from .customLLM import CustomLLM, prompt_helper
 
 load_dotenv()
 
