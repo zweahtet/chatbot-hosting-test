@@ -22,4 +22,4 @@ WORKDIR $HOME/app
 # Set the working directory to the user's home directory
 COPY --chown=user . $HOME/app
 
-CMD [ "gunicorn" , "main:app" ]
+CMD [ "gunicorn" , "/docker/app.py" ]
