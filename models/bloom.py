@@ -1,15 +1,13 @@
 import os
 
-import openai
 from customLLM import CustomLLM, prompt_helper
-from data import data
 from dotenv import load_dotenv
 from llama_index import (Document, GPTSimpleVectorIndex, LLMPredictor,
                          ServiceContext)
 
-load_dotenv()
+from data.regItems import data
 
-# openai.api_key = os.getenv("OPENAI_API_KEY")
+load_dotenv()
 
 #define our llm
 llm_predictor = LLMPredictor(llm=CustomLLM())
