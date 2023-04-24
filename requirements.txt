@@ -1,5 +1,7 @@
 Click
-Flask
+flask
+fastapi
+unvicorn
 Flask-SQLAlchemy
 gunicorn
 itsdangerous
@@ -15,3 +17,4 @@ numpy
 langchain
 python-dotenv
 flask-login
+python-multipart
