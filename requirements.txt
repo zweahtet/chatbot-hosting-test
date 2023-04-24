@@ -1,8 +1,6 @@
 Click
-flask
 fastapi
-unvicorn
-Flask-SQLAlchemy
+uvicorn[standard]==0.17.*
 gunicorn
 itsdangerous
 Jinja2
@@ -16,5 +14,4 @@ panda
 numpy
 langchain
 python-dotenv
-flask-login
 python-multipart
