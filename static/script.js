@@ -3,7 +3,7 @@ const msgerInput = get(".msger-input");
 const msgerChat = get(".msger-chat");
 
 // Icons made by Freepik from www.flaticon.com
-const BOT_IMG = "./icons/dialogflow-insights-svgrepo-com.svg";
+const BOT_IMG = "../static/icons/dialogflow-insights-svgrepo-com.svg";
 const PERSON_IMG = "";
 const BOT_NAME = "    ChatBot";
 const PERSON_NAME = "You";
@@ -24,7 +24,6 @@ function appendMessage(name, img, side, text) {
     const msgHTML = `
                 <div class="msg ${side}-msg">
                 <div class="msg-img" style="background-image: url(${img})"></div>
-
                 <div class="msg-bubble">
                     <div class="msg-info">
                         <div class="msg-info-name">${name}</div>
@@ -44,13 +43,13 @@ function appendMessage(name, img, side, text) {
 
 async function botResponse(text) {
     // Bot Response
-    const response = await fetch("chat?input=${text}");
+    console.log(text);
+    const response = await fetch(`chat?input=${text}`);
     const json = await response.json();
 
-    console.log(text);
     console.log(json);
 
-    appendMessage(BOT_NAME, BOT_IMG, "left", json.bot_reply);
+    appendMessage(BOT_NAME, BOT_IMG, "left", json.bot_reply.response);
 }
 
 // Utils

@@ -1,3 +1,4 @@
+import datetime
 import os
 
 import openai
@@ -23,15 +24,18 @@ app.mount("/static", StaticFiles(directory="static", html=True), name="static")
 # with the dialog form the user and bot
 templates = Jinja2Templates(directory="templates")
 
+index = initialize_index("index.json")
+
 @app.get("/", response_class=HTMLResponse)
 async def home(request: Request):
     return templates.TemplateResponse('chat.html', {"request": request})
 
 @app.get("/chat")
 async def chat(input: str):
+    print("input: ", input)
     bot_reply = index.query(input)
     return {"bot_reply": bot_reply}
 
 if __name__ == "__main__":
-    index = initialize_index("index.json")
+    # index = initialize_index("index.json")
     uvicorn.run("main:app", reload=True)
